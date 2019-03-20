@@ -1,0 +1,13 @@
+.footer{
+	position:fixed;
+	text-align: center;
+	border: 1px;
+	background-color: gray;
+	height: 5vh;
+	bottom: 0vh;
+	
+}
+
+.blue-back{
+	background-color:#6495ED;
+}

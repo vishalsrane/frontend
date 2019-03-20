@@ -1,0 +1,8 @@
+{
+  "/countByBusinessUnit": {
+  "target": "http://localhost:9003",
+  "secure": false,
+  "logLevel": "debug",
+  "changeOrigin": true
+  }
+}

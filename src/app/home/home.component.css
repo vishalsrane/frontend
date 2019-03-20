@@ -1,0 +1,14 @@
+.flex-fill {
+    flex: 1 1 auto;
+}
+
+:host {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+
+.side-navigation-col{
+    background: black;
+    padding: 0px;
+  }
