@@ -1,11 +1,14 @@
 <div class="row">
     <nav class="navbar sticky-top navbar-dark bg-dark flex-md-nowrap p-0 shadow" style="width: 100%">
-        <div class="col-sm-2">
-          <div class="side-menu-icon"></div>
-          <div class="side-menu-icon"></div>
-          <div class="side-menu-icon"></div>
+        <div class="col-sm-2 side-menu-toogle-button-col" id="side-menu-toogle-button-col">
+            <button class="side-menu-toogle-button" id="side-menu-toogle-button" (click)="toogleSideMenu()">
+              <div class="side-menu-icon"></div>
+              <div class="side-menu-icon"></div>
+              <div class="side-menu-icon"></div>
+            </button>
         </div>
-        <div class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Outreach Reporting</div><ul class="navbar-nav px-3">
+        <div class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Outreach Reporting</div>
+        <ul class="navbar-nav px-3">
           <li class="nav-item text-nowrap">
             <a class="nav-link" href="#">Sign out</a>
           </li>

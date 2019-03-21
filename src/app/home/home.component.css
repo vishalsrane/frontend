@@ -12,3 +12,7 @@
     background: black;
     padding: 0px;
   }
+
+.side-navigation-none{
+    display: none;
+  }

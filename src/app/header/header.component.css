@@ -2,5 +2,29 @@
     width: 35px;
     height: 5px;
     background-color: white;
-    margin: 6px 0;
+    margin: 6px auto;
+}
+
+.side-menu-toogle-button{
+    background-color: inherit;
+    border: 0px;
+    padding: 0px;
+    width:100%;
+}
+
+.side-menu-toogle-button-small{
+    background-color: inherit;
+    border: 0px;
+    padding: 0px;
+    width:100%;
+}
+
+.side-menu-toogle-button-col{
+    background-color: black; 
+    padding: 0%;
+}
+
+.side-menu-toogle-button-col-small{
+    background-color: gray; 
+    padding: 0%;
 }
