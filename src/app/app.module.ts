@@ -14,6 +14,7 @@ import { ChartComponent } from './chart/chart.component';
 import { HeaderComponent } from './header/header.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HomeComponent,
     ChartComponent,
     HeaderComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

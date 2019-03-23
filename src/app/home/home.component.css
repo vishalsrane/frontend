@@ -16,3 +16,7 @@
 .side-navigation-none{
     display: none;
   }
+
+  .main-content-col{
+    padding: 0px, 0px;
+  }

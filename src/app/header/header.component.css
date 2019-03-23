@@ -25,6 +25,9 @@
 }
 
 .side-menu-toogle-button-col-small{
-    background-color: gray; 
     padding: 0%;
+}
+
+.header-row{
+    background-color: black;
 }
