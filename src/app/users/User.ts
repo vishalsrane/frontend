@@ -1,5 +1,4 @@
 export class User{
-
   associateId: number;
   businessUnit: string;
   contactNumber: string;

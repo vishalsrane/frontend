@@ -51,39 +51,41 @@
             <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="formEmail">Email</label>
-                    <input type="email" class="form-control" id="formEmail" name="formEmail" placeholder="Email">
+                    <label for="formEmail">Name</label>
+                    <input type="text" [(ngModel)]="user.name" class="form-control" id="formName" name="name" placeholder="Name">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="formAssociateId">Associate ID</label>
-                    <input type="text" class="form-control" id="formAssociateId"   name="formAssociateId" placeholder="Associate ID">
+                    <input type="text" [(ngModel)]="user.associateId" class="form-control" id="formAssociateId"   name="associateId" placeholder="Associate ID">
                   </div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="formName">Name</label>
-                    <input type="text" class="form-control" id="formName"  name="formName" placeholder="Name">
-                  </div>
+                    <input type="text" [(ngModel)]="user.name"  class="form-control" id="formName"  name="formName" placeholder="Name">
+                </div> -->
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="formContectNumber">Contact Number</label>
-                    <input type="text" class="form-control" id="formContectNumber" placeholder="Contact Number">
+                    <input type="text" [(ngModel)]="user.contactNumber" class="form-control" id="formContectNumber" name="contactNumber" placeholder="Contact Number">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="formdesignation">Designation</label>
-                    <input type="text" class="form-control" id="formdesignation" placeholder="Designation">
+                    <input type="text" [(ngModel)]="user.designation" class="form-control" id="formDesignation" name="designation" placeholder="Designation">
                   </div>
                 </div>  
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="formLocation">Location</label>
-                    <input type="text" class="form-control" id="formLocation">
+                    <input type="text" [(ngModel)]="user.location" class="form-control" id="formLocation" name="location">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputState">Role</label>
+                    <!-- <label for="inputState">Role</label>
                     <select id="inputState" class="form-control">
                       <option selected>Choose...</option>
                       <option>...</option>
-                    </select>
+                    </select> -->
+                    <label for="formLocation">Role</label>
+                    <input type="text" [(ngModel)]="user.role" class="form-control" id="formRole" name="role">
                   </div>
                 </div>
                 <!-- <div class="form-group">
@@ -94,7 +96,7 @@
                     </label>
                   </div>
                 </div> -->
-                <button (click)="loginUser($event)" type="submit" class="btn btn-primary" data-dismiss="modal">Create</button>
+                <button (click)="createUser()" type="submit" class="btn btn-primary" data-dismiss="modal">Create</button>
               </form>
         </div>
         

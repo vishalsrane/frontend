@@ -11,16 +11,12 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   constructor(private _http: HttpClient) { }
 
-  getUsers(): Observable<any[]>{
+  getUsers(): Observable<User[]>{
     console.log('in getUsers() method');
-    return this._http.get<any[]>('/user');    
+    return this._http.get<User[]>('/user');    
   }
 
-  // getUsers(){
-  //   this._http.get('/user')
-  //   .subscribe(
-  //     data => console.log(data),
-  //     () => alert('Invalid Credentials')
-  //   );
-  // }
+  createUser(user: User): Observable<User>{
+    return this._http.post<User>('/user', user);    
+  }
 }
