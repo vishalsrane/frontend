@@ -16,6 +16,7 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { UserService } from './user.service';
     ChartComponent,
     HeaderComponent,
     SidemenuComponent,
-    UsersComponent
+    UsersComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,12 @@ import { UserService } from './user.service';
       },
       {
         path:'home',
-        component:HomeComponent
+        component:HomeComponent,
+        children: [
+          { path: 'dashboard', component: DashboardComponent, pathMatch: 'full' },
+          { path: '', component: DashboardComponent, pathMatch: 'full' },
+          { path: 'users', component: UsersComponent, pathMatch: 'full' }
+        ]
       }
     ]),
     AngularFontAwesomeModule
