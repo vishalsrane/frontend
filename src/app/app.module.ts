@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { UsersComponent } from './users/users.component';
+import { UserService } from './user.service';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { UsersComponent } from './users/users.component';
     AngularFontAwesomeModule
   ],
   providers: [
-    ChartService
+    ChartService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

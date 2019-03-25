@@ -1,3 +1,7 @@
 addUserButton{
     border: 0px; padding: 0px; height: 90%; width: 50%;
 }
+
+tr{
+    cursor:pointer;
+}

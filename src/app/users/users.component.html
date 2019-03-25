@@ -17,29 +17,18 @@
   <table class="table table-dark border border-white">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Associate ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Role</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{user.associateId}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.contactNumber}}</td>
+        <td>{{user.role}}</td>
       </tr>
     </tbody>
   </table>
@@ -53,7 +42,7 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Create User</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
@@ -62,48 +51,50 @@
             <form>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    <label for="formEmail">Email</label>
+                    <input type="email" class="form-control" id="formEmail" name="formEmail" placeholder="Email">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <label for="formAssociateId">Associate ID</label>
+                    <input type="text" class="form-control" id="formAssociateId"   name="formAssociateId" placeholder="Associate ID">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="form-group">
-                  <label for="inputAddress2">Address 2</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-                </div>
+                    <label for="formName">Name</label>
+                    <input type="text" class="form-control" id="formName"  name="formName" placeholder="Name">
+                  </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="formContectNumber">Contact Number</label>
+                    <input type="text" class="form-control" id="formContectNumber" placeholder="Contact Number">
                   </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
+                  <div class="form-group col-md-6">
+                    <label for="formdesignation">Designation</label>
+                    <input type="text" class="form-control" id="formdesignation" placeholder="Designation">
+                  </div>
+                </div>  
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="formLocation">Location</label>
+                    <input type="text" class="form-control" id="formLocation">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputState">Role</label>
                     <select id="inputState" class="form-control">
                       <option selected>Choose...</option>
                       <option>...</option>
                     </select>
                   </div>
-                  <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                  </div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
                     <label class="form-check-label" for="gridCheck">
                       Check me out
                     </label>
                   </div>
-                </div>
-                <button type="submit" class="btn btn-primary" data-dismiss="modal">Sign in</button>
+                </div> -->
+                <button (click)="loginUser($event)" type="submit" class="btn btn-primary" data-dismiss="modal">Create</button>
               </form>
         </div>
         

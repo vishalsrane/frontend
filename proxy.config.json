@@ -4,5 +4,12 @@
   "secure": false,
   "logLevel": "debug",
   "changeOrigin": true
-  }
+  },
+
+  "/user": {
+    "target": "http://localhost:9003",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+    }
 }
