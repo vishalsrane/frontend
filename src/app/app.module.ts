@@ -17,6 +17,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     HttpModule,
     HttpClientModule,
+    BsDatepickerModule.forRoot(),
     RouterModule.forRoot([
       {
         path:'',
