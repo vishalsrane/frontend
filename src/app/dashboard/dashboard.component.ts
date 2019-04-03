@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  xFilters: string[] =["Time", "Location", "Business Unit"];
+  yFilters: string[] =["Head Count", "Unique Volunteers", "Total Volunteering Hours",
+  "Coverage", "Frequency Per Volunteer", "Hours Per Associate","Hours Per Volunteer",
+  "Total Events", "Hoursper Event", "Volunteers Per Event"];
   constructor() { }
 
   ngOnInit() {
