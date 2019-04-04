@@ -1,3 +1,6 @@
 export class Participation{
-    fromDate: Date;
+    public fromDate: Date;
+    public toDate: Date;
+    public allLocations: string[];
+    public allBunessUnits: string[];
   }

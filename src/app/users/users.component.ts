@@ -14,15 +14,18 @@ export class UsersComponent implements OnInit {
   constructor(private userService : UserService) { }
 
   ngOnInit() {
+    console.log('entering UsersComponent onInit method');
     this.userService.getUsers()
                      .subscribe(data =>this.users = data, error => console.log(error));
+    console.log('exit UsersComponent onInit method');
   }
 
   createUser(){
-    console.log('inside createUser');
+    console.log('entering UsersComponent createUser method');
     this.userService.createUser(this.user)
                     .subscribe(data =>this.user = data, error => console.log(error));
     this.users.unshift(this.user);
+    console.log('exit UsersComponent createUser method');
  }
 
 
