@@ -4,17 +4,19 @@
     <div class="col-md-1" style="padding: 2px; font-size: 11px;">
       <input class="rounded-sm primary-filter" bsDatepicker [(bsValue)]="fromDate"  value="{{ fromDate | date:'dd-MMM-yyyy' }}" id="fromDate" type="text" placeholder="From Date">
     </div>
-    <div class="col-md-1 rounded-sm" style="padding: 2px;">
-      <input class="rounded-sm primary-filter" bsDatepicker id="toDate" type="text" placeholder="To Date">
+    <div class="col-md-1 rounded-sm" style="padding: 2px; font-size: 11px;">
+      <input class="rounded-sm primary-filter" bsDatepicker [(bsValue)]="toDate"  value="{{ toDate | date:'dd-MMM-yyyy' }}" id="toDate" type="text" placeholder="To Date">
     </div>
     <div class="col-md-2" style="padding: 2px;">
       <select class="form-control form-control-sm primary-filter" id="businessUnit">
         <option>Business Unit All</option>
+        <option *ngFor="let bu of businessUnits" >{{bu}}</option>
       </select>
     </div>
     <div class="col-md-2" style="padding: 2px;">
       <select class="form-control form-control-sm primary-filter" id="baseLocation">
         <option>Base Location All</option>
+        <option *ngFor="let location of locations" >{{location}}</option>
       </select>
     </div>
     <div class="col-md-3"></div>

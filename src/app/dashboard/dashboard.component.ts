@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   private participation:Participation = new Participation();
   private fromDate: Date;
   private toDate: Date;
-  private businessUnits: string[] = [];
+  private businessUnits: string[] = ["a", "b"];
   
   private locations: string[] = [];
 
@@ -32,14 +32,13 @@ export class DashboardComponent implements OnInit {
   }
 
   setInitialvalues(data){
+    console.log('enetered setInitialvalues')
     this.participation = data;
     this.fromDate = this.participation.fromDate;
+    this.toDate = this.participation.toDate;
+    this.businessUnits = this.participation.businessUnits;
+    this.locations = this.participation.locations;
   }
 
-  somethingChanged(){
-    console.log('something changed started ');
-    console.log(this.fromDate);
-    console.log('something changed done ');
-  }
 
 }
