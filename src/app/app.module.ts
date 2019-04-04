@@ -18,6 +18,7 @@ import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { DashboardService } from 'src/app/dashboard.service';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import {BsDatepickerModule} from 'ngx-bootstrap/datepicker';
   ],
   providers: [
     ChartService,
-    UserService
+    UserService,
+    DashboardService
   ],
   bootstrap: [AppComponent]
 })

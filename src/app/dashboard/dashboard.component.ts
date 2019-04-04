@@ -11,6 +11,11 @@ export class DashboardComponent implements OnInit {
   
   private participation: any;
 
+  xFilters: string[] =["Time", "Location", "Business Unit"];
+  yFilters: string[] =["Head Count", "Unique Volunteers", "Total Volunteering Hours",
+  "Coverage", "Frequency Per Volunteer", "Hours Per Associate","Hours Per Volunteer",
+  "Total Events", "Hoursper Event", "Volunteers Per Event"];
+
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {

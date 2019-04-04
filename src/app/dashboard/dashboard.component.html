@@ -1,44 +1,52 @@
 <div class="dashboard">
   <div class="row text-white bg-dark border border-white" style="margin: 0px;">
-    <div class="col-md-2">
-      <div>
-        <label for="fromDate" style="margin: 0px; width: 100%">From Date </label>
-      </div>
-      <div>
-        <input bsDatepicker id="fromDate" type="text" style="width: 100px">
-      </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-1" style="padding: 2px;">
+      <input class="rounded-sm primary-filter" bsDatepicker id="fromDate" type="text" placeholder="From Date">
     </div>
-    <div class="col-md-2">
-      <div>
-        <label for="fromDate" style="margin: 0px">To Date </label>
-      </div>
-      <div>
-        <input bsDatepicker id="fromDate" type="text" style="width: 100px">
-      </div>
+    <div class="col-md-1 rounded-sm" style="padding: 2px;">
+      <input class="rounded-sm primary-filter" bsDatepicker id="toDate" type="text" placeholder="To Date">
     </div>
-    <div class="col-md-2">
-      <div>
-        <label for="businessUnit" style="margin: 0px; width: 100%">Business Unit</label>
-      </div>
-      <div>
-        <select class="form-control form-control-sm" id="businessUnit" style="padding: 0px; border: 0px;">
-          <option>All</option>
-        </select>
-      </div>
+    <div class="col-md-2" style="padding: 2px;">
+      <select class="form-control form-control-sm primary-filter" id="businessUnit">
+        <option>Business Unit All</option>
+      </select>
     </div>
-    <div class="col-md-2">
-      <div>
-        <label for="baseLocation" style="margin: 0px; width: 100%">Base Location</label>
-      </div>
-      <div>
-        <select class="form-control form-control-sm" id="baseLocation" style="padding: 0px; border: 0px;">
-          <option>All</option>
-        </select>
-      </div>
+    <div class="col-md-2" style="padding: 2px;">
+      <select class="form-control form-control-sm primary-filter" id="baseLocation">
+        <option>Base Location All</option>
+      </select>
     </div>
     <div class="col-md-3"></div>
-    <div class="col-md-1">
-      <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+  </div>
+
+  <div class="row text-white bg-dark border border-white" style="margin: 0px;">
+    <div class="col-md-2 x-axis" style="border-right: 1px solid white">
+      <div style="border-bottom: 1px solid white">
+        <span>x-axis</span>
+      </div>
+      <div>
+        <div *ngFor="let xFilter of xFilters">
+          <input type="radio" name="xFilter" value="{{xFilter}}" value="{{xFilter}}">
+          <label for="{{xFilter}}">{{xFilter}}</label>
+        </div>
+      </div>
     </div>
+    <div class="col-md-8 x-axis" style="border-right: 1px solid white;">
+      <div style="border-bottom: 1px solid white;">
+        <span>y-axis</span>
+      </div>
+      <div style="display: table;">
+        <div *ngFor="let yFilter of yFilters" style="display: table-cell;">
+          <input type="checkbox" name="yFilter" value="{{yFilter}}" value="{{yFilter}}">
+          <label for="{{yFilter}}">{{yFilter}}</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 y-axis"></div>
+  </div>
+
+  <div class="row bg-light">
+
   </div>
 </div>
