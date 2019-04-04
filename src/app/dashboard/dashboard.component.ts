@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from 'src/app/dashboard.service';
+import { Participation } from 'src/app/dashboard/Participation';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  
+  private participation: any;
 
-  constructor() { }
+  constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
+    console.log('inside dashboard onInit()=========>');
+    this.dashboardService.getParticipationMatrics()
+        .subscribe(data =>this.participation = data, error => console.log(error));
+    console.log(this.participation);
   }
 
 }
